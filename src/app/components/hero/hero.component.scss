@@ -1,0 +1,177 @@
+/* hero.component.scss */
+
+.hero-section {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+/* Elementos de Texto */
+.hero-content {
+  .p-badge {
+    display: inline-block;
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text);
+    margin: 0;
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin: 2rem 0;
+    max-width: 600px;
+
+    @media (max-width: 992px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+/* Botões Estilo Prime */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+
+  .p-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &-primary {
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: var(--bg);
+
+      &:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+      }
+    }
+
+    &-outline {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+
+      &:hover {
+        background: rgba(var(--primary-rgb), 0.05);
+      }
+    }
+  }
+}
+
+/* Imagem e Efeitos Visuais */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .image-wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      top: -10%;
+      left: -10%;
+      background: var(--primary);
+      filter: blur(80px);
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    .profile-img {
+      width: 320px;
+      height: 320px;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  /* Para quebrar linha no celular se precisar */
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: help;
+
+    /* No modo Dark, podemos dar um leve brilho se quiser */
+    filter: grayscale(20%) brightness(0.9);
+
+    &:hover {
+      transform: translateY(-5px) scale(1.2);
+      filter: drop-shadow(0 0 8px var(--primary));
+    }
+  }
+}

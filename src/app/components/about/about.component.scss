@@ -1,0 +1,119 @@
+/* about.component.scss */
+
+.about-section {
+  padding: 100px 0;
+  background-color: var(--bg-card);
+  position: relative;
+  z-index: 1;
+
+  /* Ativa as animações de Scroll apenas se o navegador suportar */
+  @supports (view-timeline: --any) {
+    view-timeline-name: --aboutSection;
+    view-timeline-axis: block;
+
+    /* Aplicamos as duas animações simultaneamente */
+    animation: 
+      revealAbout linear forwards, 
+      destroyAbout linear forwards;
+    
+    animation-timeline: --aboutSection;
+
+    /* Range de Entrada: Do início até 30% da seção aparecer */
+    animation-range: 
+      entry 0% entry 30%, 
+      exit 0% exit 80%;
+  }
+}
+
+/* Animação 1: Chegada (Fade-in + Subida) */
+@keyframes revealAbout {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.95);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Animação 2: Saída (Fade-out + Encolhimento) */
+@keyframes destroyAbout {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.85);
+    filter: blur(20px);
+  }
+}
+
+/* Layout e Estilos Internos (Mantidos) */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-muted-color); 
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+
+  strong {
+    color: var(--text);
+  }
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+
+  .stat-card {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
+    transition: all 0.3s ease;
+
+    .stat-number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-muted-color);
+      font-weight: 500;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+  }
+}

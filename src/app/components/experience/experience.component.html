@@ -1,0 +1,62 @@
+<section class="experience-section" id="experiencia">
+  <div class="container">
+    <h2 class="section-title">Minha Trajetória na Daten</h2>
+
+    <div class="timeline-wrapper" 
+         #scrollContainer
+         (mousedown)="startDragging($event)" 
+         (mouseleave)="stopDragging()" 
+         (mouseup)="stopDragging()" 
+         (mousemove)="moveEvent($event)">
+         
+      <div class="horizontal-timeline">
+        
+        <div class="timeline-node" #expItem>
+          <div class="node-info">
+            <span class="node-date">2017</span>
+            <h3>Jovem Aprendiz</h3>
+            <p>Início das atividades aprendendo a cultura Daten.</p>
+          </div>
+          <div class="node-dot"><i class="pi pi-star"></i></div>
+        </div>
+
+        <div class="timeline-node" #expItem>
+          <div class="node-info">
+            <span class="node-date">2018</span>
+            <h3>Montador</h3>
+            <p>Contratação efetiva para a linha de produção.</p>
+          </div>
+          <div class="node-dot"><i class="pi pi-cog"></i></div>
+        </div>
+
+        <div class="timeline-node" #expItem>
+          <div class="node-info">
+            <span class="node-date">Jan 2019</span>
+            <h3>Auxiliar de PCP</h3>
+            <p>Promoção para o Planejamento e Controle de Produção.</p>
+          </div>
+          <div class="node-dot"><i class="pi pi-chart-line"></i></div>
+        </div>
+
+        <div class="timeline-node" #expItem>
+          <div class="node-info">
+            <span class="node-date">Abr 2021</span>
+            <h3>Assistente de PCP</h3>
+            <p>Suporte estratégico à produção industrial.</p>
+          </div>
+          <div class="node-dot"><i class="pi pi-list"></i></div>
+        </div>
+
+        <div class="timeline-node" #expItem>
+          <div class="node-info">
+            <span class="node-date">Fev 2023 - Atual</span>
+            <h3>Supervisor de Produção</h3>
+            <p>Liderança direta da operação e gestão de equipes.</p>
+          </div>
+          <div class="node-dot highlight-dot"><i class="pi pi-briefcase"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
