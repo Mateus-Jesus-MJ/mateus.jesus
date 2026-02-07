@@ -3,37 +3,13 @@
     <h2 class="section-title">Minhas Competências</h2>
 
     <div class="skills-grid">
-      <div class="p-card-skill" #skillCard>
-        <div class="card-header"><i class="pi pi-server"></i>
-          <h3>Backend</h3>
+      <!-- Card Dinâmico gerado pelo JSON -->
+      <div class="p-card-skill" *ngFor="let item of skillsData" #skillCard>
+        <div class="card-header"><i [class]="item.icon"></i>
+          <h3>{{ item.area }}</h3>
         </div>
         <ul class="skill-list">
-          <li>PHP (Laravel)</li>
-          <li>C# (.NET Core)</li>
-          <li>Python / VBA</li>
-          <li>MySQL / SQL Server</li>
-        </ul>
-      </div>
-
-      <div class="p-card-skill" #skillCard>
-        <div class="card-header"><i class="pi pi-desktop"></i>
-          <h3>Frontend</h3>
-        </div>
-        <ul class="skill-list">
-          <li>Angular</li>
-          <li>JavaScript / TypeScript</li>
-          <li>HTML5 / CSS3 (SCSS)</li>
-        </ul>
-      </div>
-
-      <div class="p-card-skill" #skillCard>
-        <div class="card-header"><i class="pi pi-cog"></i>
-          <h3>Automação</h3>
-        </div>
-        <ul class="skill-list">
-          <li>Telegram Bots</li>
-          <li>Web Scraping (Selenium)</li>
-          <li>RPA / Selenium</li>
+          <li *ngFor="let tech of item.tecnologias">{{ tech }}</li>
         </ul>
       </div>
     </div>
