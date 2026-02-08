@@ -1,29 +1,16 @@
-import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren, OnDestroy, Inject, PLATFORM_ID, OnInit } from '@angular/core';
-import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { PortfolioService } from '../experience/portfolio.service';
+import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class SkillsComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('skillCard') cards!: QueryList<ElementRef>;
   private observer: IntersectionObserver | null = null;
-  skillsData: any[] = [];
 
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: Object,
-    private portfolioService: PortfolioService
-  ) {}
-
-  ngOnInit(): void {
-    this.portfolioService.getDados().subscribe(data => {
-      this.skillsData = data.competencias;
-    });
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
     // Só executa se estiver no navegador

@@ -1,0 +1,58 @@
+{
+  "competencias": [
+    {
+      "area": "Backend",
+      "icon": "pi pi-server",
+      "tecnologias": ["PHP (Laravel)", "C# (.NET Core)", "Python / VBA"]
+    },
+    {
+      "area": "Frontend",
+      "icon": "pi pi-desktop",
+      "tecnologias": ["Angular", "JavaScript / TypeScript", "HTML5 / CSS3 (SCSS)"]
+    },
+    {
+      "area": "Banco de Dados",
+      "icon": "pi pi-database",
+      "tecnologias": ["MySQL", "SQL Server", "PostgreSQL", "Firebase", "MariaDB"]
+    },
+    {
+      "area": "Automação",
+      "icon": "pi pi-cog",
+      "tecnologias": ["Telegram Bots", "Web Scraping (Selenium)", "RPA / Selenium"]
+    }
+  ],
+  "experiencias": [
+    {
+      "empresa": "Daten Tecnologia",
+      "cargos": [
+        { "titulo": "Jovem Aprendiz", "periodo": "2017", "descricao": "Início das atividades aprendendo a cultura Daten." },
+        { "titulo": "Montador", "periodo": "2018", "descricao": "Contratação efetiva para a linha de produção." },
+        { "titulo": "Auxiliar de PCP", "periodo": "Jan 2019", "descricao": "Promoção para o Planejamento e Controle de Produção." },
+        { "titulo": "Assistente de PCP", "periodo": "Abr 2021", "descricao": "Suporte estratégico à produção industrial." },
+        { "titulo": "Supervisor de Produção", "periodo": "Fev 2023 - Atual", "descricao": "Liderança direta da operação e gestão de equipes." }
+      ]
+    }
+  ],
+  "contatos": [
+    {
+      "nome": "GitHub",
+      "url": "https://github.com/Mateus-Jesus-MJ",
+      "icon": "pi pi-github"
+    },
+    {
+      "nome": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mateus-de-jesus-da-silva-666045234",
+      "icon": "pi pi-linkedin"
+    },
+    {
+      "nome": "Email",
+      "url": "mailto:mateusdejesus2602@gmail.com",
+      "icon": "pi pi-envelope"
+    },
+    {
+      "nome": "WhatsApp",
+      "url": "https://wa.me/55739884654041",
+      "icon": "pi pi-whatsapp"
+    }
+  ]
+}
