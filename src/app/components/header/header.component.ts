@@ -32,10 +32,21 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuActive = !this.isMobileMenuActive;
+    this.updateBodyScroll();
+  }
+
+  closeMobileMenu() {
+    if (this.isMobileMenuActive) {
+      this.isMobileMenuActive = false;
+      this.updateBodyScroll();
+    }
+  }
+
+  private updateBodyScroll() {
     if (this.isMobileMenuActive) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     }
   }
 }
