@@ -1,42 +1,27 @@
-<footer class="footer-section">
+<footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-brand">
-        <h2 class="logo-text">MateusJesus<span>.dev</span></h2>
-        <p>Desenvolvedor Fullstack focado em soluções modernas e automação de processos.</p>
+      <div class="footer-logo">
+        <span class="accent-text">M</span>ateus <span class="accent-text">J</span>esus
       </div>
-
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#habilidades">Competências</a></li>
-          <li><a href="#experiencia">Trajetória</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-social">
-        <h4>Redes Sociais</h4>
-        <div class="social-icons">
-          <a href="https://github.com/Mateus-Jesus-MJ" target="_blank" aria-label="GitHub">
-            <i class="pi pi-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/mateus-de-jesus-da-silva-666045234/" target="_blank" aria-label="LinkedIn">
-            <i class="pi pi-linkedin"></i>
-          </a>
-          <a href="mailto:seu-email@email.com" aria-label="E-mail">
-            <i class="pi pi-envelope"></i>
-          </a>
-        </div>
+      <p class="footer-tagline">Soluções inteligentes para processos corporativos.</p>
+      
+      <div class="footer-socials">
+         <a href="#" class="footer-social-link">GitHub</a>
+         <a href="#" class="footer-social-link">LinkedIn</a>
+         <a href="#" class="footer-social-link">Instagram</a>
       </div>
     </div>
-
+    
     <div class="footer-bottom">
       <p>&copy; {{ currentYear }} Mateus de Jesus. Todos os direitos reservados.</p>
-      <button class="scroll-top" (click)="scrollToTop()" aria-label="Voltar ao topo">
-        <i class="pi pi-arrow-up"></i>
-      </button>
+      <div class="footer-tech">Built with Angular & Custom CSS</div>
     </div>
   </div>
+  
+  <button class="back-to-top" (click)="scrollToTop()" [class.visible]="showBackToTop">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 </footer>

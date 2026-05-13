@@ -1,0 +1,60 @@
+.differentials-section {
+  position: relative;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.diff-card {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: var(--transition-speed);
+}
+
+.diff-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.diff-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-secondary);
+  color: var(--accent);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: var(--transition-speed);
+}
+
+.diff-card:hover .diff-icon {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.diff-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.diff-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.diff-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

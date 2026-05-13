@@ -1,0 +1,44 @@
+<section id="qualifications" class="qualifications-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="subtitle">Aprendizado Contínuo</span>
+      <h2 class="title">Cursos & <span class="accent-text">Qualificações</span></h2>
+      <p class="section-desc">Uma base sólida construída através de certificações nacionais e internacionais.</p>
+    </div>
+
+    <div class="qualifications-container">
+      <div class="scroll-wrapper">
+        <div class="categories-grid">
+          @for (cat of categories; track cat.name) {
+            <div class="category-block">
+              <div class="category-header">
+                <div class="category-icon">
+                  @if (cat.icon === 'industrial') { <i class="fas fa-industry"></i> }
+                  @if (cat.icon === 'code') { <i class="fas fa-code"></i> }
+                  @if (cat.icon === 'people') { <i class="fas fa-users"></i> }
+                  @if (cat.icon === 'finance') { <i class="fas fa-chart-line"></i> }
+                  @if (cat.icon === 'tools') { <i class="fas fa-tools"></i> }
+                </div>
+                <h3>{{ cat.name }}</h3>
+              </div>
+              
+              <div class="courses-list">
+                @for (course of cat.courses; track course.title) {
+                  <div class="course-card">
+                    <div class="course-info">
+                      <span class="course-title">{{ course.title }}</span>
+                      <span class="course-provider">{{ course.provider }}</span>
+                    </div>
+                    <div class="course-badge">
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

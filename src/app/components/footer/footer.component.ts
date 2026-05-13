@@ -1,22 +1,23 @@
-import { Component, Inject, PLATFORM_ID, OnInit } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrl: './footer.component.css'
 })
-export class FooterComponent implements OnInit {
-  currentYear: number = new Date().getFullYear();
+export class FooterComponent {
+  currentYear = new Date().getFullYear();
+  showBackToTop = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngOnInit() {}
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showBackToTop = window.scrollY > 500;
+  }
 
   scrollToTop() {
-    if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

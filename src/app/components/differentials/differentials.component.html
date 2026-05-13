@@ -1,0 +1,22 @@
+<section id="differentials" class="differentials-section">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="subtitle">Diferenciais</span>
+      <h2 class="title">Por que <span class="accent-text">Trabalhar Comigo?</span></h2>
+    </div>
+
+    <div class="diff-grid">
+      @for (diff of differentials; track diff.title) {
+        <div class="diff-card">
+          <div class="diff-icon">
+             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+               <path [attr.d]="diff.icon"></path>
+             </svg>
+          </div>
+          <h3 class="diff-title">{{ diff.title }}</h3>
+          <p class="diff-desc">{{ diff.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

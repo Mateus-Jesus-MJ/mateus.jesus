@@ -1,49 +1,41 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
-  standalone: true, // Certifique-se de que está como standalone se estiver usando Angular moderno
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit {
-  isDarkMode = true;
+export class HeaderComponent {
+  public themeService = inject(ThemeService);
+  
+  isScrolled = false;
+  isMobileMenuActive = false;
+  scrollProgress = 0;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-
-  ngOnInit() {
-    // 1. Verifica se estamos no navegador antes de acessar window ou localStorage
-    if (isPlatformBrowser(this.platformId)) {
-      const savedTheme = localStorage.getItem('theme');
-      
-      if (savedTheme) {
-        this.isDarkMode = savedTheme === 'dark';
-      } else {
-        // Se não houver tema salvo, verifica a preferência do sistema do usuário
-        this.isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      }
-      
-      this.applyTheme();
-    }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+    
+    // Calculate scroll progress
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    this.scrollProgress = (winScroll / height) * 100;
   }
 
   toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
-    
-    // 2. Proteção extra para o localStorage no método de clique
-    if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
-      this.applyTheme();
-    }
+    this.themeService.toggleTheme();
   }
 
-  private applyTheme() {
-    // 3. O document só existe no navegador
-    if (isPlatformBrowser(this.platformId)) {
-      const theme = this.isDarkMode ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', theme);
+  toggleMobileMenu() {
+    this.isMobileMenuActive = !this.isMobileMenuActive;
+    if (this.isMobileMenuActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
     }
   }
 }
