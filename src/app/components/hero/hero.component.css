@@ -142,15 +142,24 @@
   color: var(--text-secondary);
 }
 
-.tech-icons i {
+.tech-icons i, .tech-icons span.tech-text-icon {
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.tech-icons i:hover {
+.tech-icons i:hover, .tech-icons span.tech-text-icon:hover {
   color: var(--accent);
   transform: scale(1.2) translateY(-5px);
   filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+
+.tech-text-icon {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem; /* Adjust font size relative to icon size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .scroll-down {
