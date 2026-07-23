@@ -8,6 +8,8 @@ interface Project {
     features: string[];
     icon?: string;
     fullDescription?: string;
+    website?: string;
+    textwebsite?: string;
 }
 
 @Component({
@@ -61,21 +63,35 @@ A ferramenta assegura padronização, rastreabilidade e conformidade dos process
             icon: 'M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 14h-4v-4H6v-4h4V6h4v4h4v4h-4v4z'
         },
         {
-            title: 'DUCKCORE',
-            description: 'Sistema de solução integrada para automação de processos e mensageria.',
-            fullDescription: `Solução Integrada de Automação de Mensageria e Orquestração de Processos.
+            title: 'Profily — Do perfil ao currículo em minutos',
+            description: 'Plataforma inteligente para criação de currículos profissionais de alto impacto.',
+            fullDescription: `Plataforma Inteligente para Construção de Currículos Profissionais.
 
-O DuckCore é uma plataforma robusta desenvolvida em Node.js, projetada para preencher a lacuna entre a comunicação estratégica via WhatsApp e a execução técnica de scripts automatizados. 
+O Profily é uma plataforma web desenvolvida para transformar informações profissionais em currículos modernos, organizados e visualmente elegantes. Com uma experiência totalmente interativa, o usuário acompanha em tempo real a construção do documento enquanto preenche seus dados, tornando o processo simples, rápido e intuitivo.
 
-A ferramenta atua como um centro de comando inteligente, um Dashboard de Controle de Missão, permitindo o gerenciamento de fluxos de informação e automações complexas em um único ecossistema.
+Muito além de um gerador de currículos, o Profily oferece recursos inteligentes para valorizar a trajetória profissional do usuário. A plataforma organiza experiências, formações, habilidades e certificações em um layout profissional, permitindo personalização completa e geração de documentos prontos para processos seletivos.
 
-O diferencial do DuckCore é a comunicação inteligente via WhatsApp, diferente de disparadores de mensagens comuns, o DuckCore utiliza tecnologia de emulação de Web Client para garantir uma integração fluida com o WhatsApp e sem a necessidade de pagamento extra por isso.
+Entre seus diferenciais estão a geração inteligente de resumo profissional, múltiplos modelos premium de currículo, organização dinâmica das experiências, salvamento automático das informações e exportação em PDF vetorial de alta qualidade, garantindo compatibilidade com sistemas ATS utilizados por recrutadores.
 
-O DuckCore não é apenas um bot de mensagens, mas um orquestrador de produtividade. Ele une a facilidade de comunicação do WhatsApp com o poder de processamento do Python, oferecendo controle total sobre o fluxo de trabalho automatizado.
+Combinando tecnologia, design e usabilidade, o Profily ajuda profissionais de qualquer área a apresentarem sua trajetória de forma clara, moderna e profissional.
 `,
-            tags: ['Node.js', 'JSON', 'Python'],
-            features: ['Automação de Processos', 'Mensageria WhatsApp & Telegram', 'Orquestração de Processos', 'Scripts Python Customizados', 'Coleta Inteligente de Dados'],
-            icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'
+            website: 'https://profilycv.vercel.app/',
+            textwebsite: 'Profily - Do perfil ao currículo em minutos',
+            tags: [
+                'Angular',
+                'TypeScript',
+                'CSS3',
+            ],
+            features: [
+                'Editor com Visualização em Tempo Real',
+                'Geração Inteligente de Resumo Profissional',
+                'Modelos Premium de Currículo',
+                'Organização por Drag-and-Drop',
+                'Exportação em PDF Vetorial',
+                'Otimização para ATS',
+                'Personalização Completa'
+            ],
+            icon: 'M7 2h8a2 2 0 0 1 2 2v16l-6-3-6 3V4a2 2 0 0 1 2-2z'
         }
     ];
 
