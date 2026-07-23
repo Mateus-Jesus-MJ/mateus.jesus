@@ -1,5 +1,6 @@
 .hero-section {
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 10vh; /* Prevents overlap with navbar */
   display: flex;
   align-items: center;
   position: relative;
@@ -11,10 +12,11 @@
   max-width: 800px;
   position: relative;
   z-index: 2;
+  margin-top: 5vh; /* Push content down slightly on small screens */
 }
 
 .greeting {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem); /* Make greeting slightly responsive */
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -23,13 +25,13 @@
 }
 
 .name {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2.2rem, 8vw, 5rem); /* Smaller minimum size so it fits on mobile */
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
 
 .role {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.2rem, 4vw, 2.5rem); /* Also adjusted for smaller screens */
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
@@ -40,7 +42,7 @@
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
   max-width: 600px;
@@ -102,7 +104,7 @@
 }
 
 .tech-stack {
-  margin-top: 3rem;
+  margin-top: 6vh; /* Proportional spacing based on screen height */
   display: flex;
   align-items: center;
   gap: 2rem;
