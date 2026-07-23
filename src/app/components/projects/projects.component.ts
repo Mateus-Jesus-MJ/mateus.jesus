@@ -61,7 +61,27 @@ A ferramenta assegura padronização, rastreabilidade e conformidade dos process
             fullDescription: 'Plataforma integrada para gestão hospitalar moderna. Abrange desde o prontuário eletrônico do paciente até a telemedicina avançada, com módulos de controle rígido de farmácia, leitos e gestão administrativa complexa.',
             tags: ['Angular', 'Firebase', 'Google Cloud'],
             features: ['Cadastro de Pacientes', 'Telemedicina', 'Gestão de Medicamentos', 'Gestão de Leitos e Internamentos', 'Dashboards Analíticos'],
-            icon: 'M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 14h-4v-4H6v-4h4V6h4v4h4v4h-4v4z'
+            icon: 'M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 14h-4v-4H6v-4h4V6h4v4h4v4h-4v4z',
+            website: 'https://sghss-vida-plus.vercel.app/',
+            textwebsite: 'Acesse o SGHSS vida plus'
+        },
+        {
+            title: 'DUCKCORE',
+            description: 'Sistema de solução integrada para automação de processos e mensageria.',
+            fullDescription: `Solução Integrada de Automação de Mensageria e Orquestração de Processos.,
+
+O DuckCore é uma plataforma robusta desenvolvida em Node.js, projetada para preencher a lacuna entre a comunicação estratégica via WhatsApp e a execução técnica de scripts automatizados. 
+
+A ferramenta atua como um centro de comando inteligente, um Dashboard de Controle de Missão, permitindo o gerenciamento de fluxos de informação e automações complexas em um único ecossistema.
+
+O diferencial do DuckCore é a comunicação inteligente via WhatsApp, diferente de disparadores de mensagens comuns, o DuckCore utiliza tecnologia de emulação de Web Client para garantir uma integração fluida com o WhatsApp e sem a necessidade de pagamento extra por isso.
+
+O DuckCore não é apenas um bot de mensagens, mas um orquestrador de produtividade. Ele une a facilidade de comunicação do WhatsApp com o poder de processamento do Python, oferecendo controle total sobre o fluxo de trabalho automatizado.
+
+`,
+            tags: ['Node.js', 'JSON', 'Python'],
+            features: ['Automação de Processos', 'Mensageria WhatsApp & Telegram', 'Orquestração de Processos', 'Scripts Python Customizados', 'Coleta Inteligente de Dados'],
+            icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5',
         },
         {
             title: 'Profily — Do perfil ao currículo em minutos',
@@ -93,6 +113,16 @@ Combinando tecnologia, design e usabilidade, o Profily ajuda profissionais de qu
                 'Personalização Completa'
             ],
             icon: 'M7 2h8a2 2 0 0 1 2 2v16l-6-3-6 3V4a2 2 0 0 1 2-2z'
+        },
+        {
+            title: 'LinkPrime - Rastreamento de Ofertas',
+            description: 'Plataforma automatizada para agregação e monitoramento de promoções e links de afiliados de e-commerce.',
+            fullDescription: 'Sistema completo de monitoramento de e-commerce e gestão de ofertas. Conta com robôs em Python automatizados para coleta e validação contínua de promoções, enviando os dados diretamente para uma API backend robusta responsável pela organização e distribuição dos links de afiliados.',
+            tags: ['Laravel', 'Python', 'Web Scraping', 'Automation'],
+            features: ['Scraping Automatizado de Promoções', 'Gestão de Links de Afiliados', 'API REST Backend', 'Filtro e Categorização de Ofertas', 'Atualização em Tempo Real'],
+            icon: 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1',
+            website: 'https://linkprime.onrender.com/',
+            textwebsite: 'Acesse o LinkPrime'
         }
     ];
 
