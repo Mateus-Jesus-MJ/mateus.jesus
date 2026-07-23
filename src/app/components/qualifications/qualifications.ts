@@ -70,6 +70,7 @@ export class QualificationsComponent {
       courses: [
         { title: 'Domínio de VBA, Excel e Ferramentas Office', provider: 'Especialista' },
         { title: 'Ferramentas Google e Workspace', provider: 'Especialista' },
+        { title: 'CorelDraw e Canvas', provider: 'Especialista' },
         { title: 'Operador de Máquinas Pesadas - Retroescavadeira', provider: 'MVB' }
       ]
     }
