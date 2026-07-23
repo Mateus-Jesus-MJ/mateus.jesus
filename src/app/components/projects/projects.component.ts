@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollRevealDirective } from '../../directives/scroll-reveal/scroll-reveal';
 
 interface Project {
     title: string;
@@ -15,7 +16,7 @@ interface Project {
 @Component({
     selector: 'app-projects',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, ScrollRevealDirective],
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.css'
 })

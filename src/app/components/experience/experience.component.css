@@ -19,11 +19,8 @@
 }
 
 .journey-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 2.5rem;
-    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
 }

@@ -1,6 +1,6 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" appScrollReveal>
       <span class="subtitle">Portfólio</span>
       <h2 class="title">Projetos <span class="accent-text">Recentes</span></h2>
       <p class="section-desc">Soluções desenvolvidas para otimização de processos industriais e gestão de dados.</p>
@@ -8,7 +8,7 @@
 
     <div class="projects-grid">
       @for (project of projects; track project.title) {
-      <div class="project-card" (click)="openProjectDetails(project)">
+      <div class="project-card neon-card" appScrollReveal (click)="openProjectDetails(project)">
         <div class="project-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

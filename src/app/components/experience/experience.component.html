@@ -1,45 +1,44 @@
 <section id="experience" class="experience-section">
   <div class="container">
-    <div class="section-header">
-      <span class="subtitle">Trajetória</span>
+    <div class="section-header" appScrollReveal>
       <h2 class="title">Minha <span class="accent-text">Jornada Profissional</span></h2>
       <p class="section-desc">Uma trajetória marcada por evolução constante, da operação à gestão industrial.</p>
     </div>
 
     <div class="journeys-container">
       @for (journey of careerJourneys; track journey.title) {
-        <div class="journey-card" [class.evolution-card]="journey.isEvolution">
-          <div class="journey-header">
-            <div class="journey-info">
-              <h3>{{ journey.title }}</h3>
-              <span class="company-name">{{ journey.company }}</span>
-            </div>
-            <div class="journey-period">{{ journey.period }}</div>
+      <div class="journey-card neon-card" appScrollReveal [class.evolution-card]="journey.isEvolution">
+        <div class="journey-header">
+          <div class="journey-info">
+            <h3>{{ journey.title }}</h3>
+            <span class="company-name">{{ journey.company }}</span>
           </div>
-
-          <div class="steps-timeline">
-            @for (step of journey.steps; track step.role; let last = $last) {
-              <div class="step-item">
-                <div class="step-marker">
-                  <div class="step-dot"></div>
-                  @if (!last) { <div class="step-line"></div> }
-                </div>
-                <div class="step-content">
-                  <div class="step-header">
-                    <span class="step-role">{{ step.role }}</span>
-                    <span class="step-date">{{ step.period }}</span>
-                  </div>
-                  <p class="step-desc">{{ step.description }}</p>
-                  <div class="step-skills">
-                    @for (skill of step.skills; track skill) {
-                      <span class="skill-tag">{{ skill }}</span>
-                    }
-                  </div>
-                </div>
-              </div>
-            }
-          </div>
+          <div class="journey-period">{{ journey.period }}</div>
         </div>
+
+        <div class="steps-timeline">
+          @for (step of journey.steps; track step.role; let last = $last) {
+          <div class="step-item">
+            <div class="step-marker">
+              <div class="step-dot"></div>
+              @if (!last) { <div class="step-line"></div> }
+            </div>
+            <div class="step-content">
+              <div class="step-header">
+                <span class="step-role">{{ step.role }}</span>
+                <span class="step-date">{{ step.period }}</span>
+              </div>
+              <p class="step-desc">{{ step.description }}</p>
+              <div class="step-skills">
+                @for (skill of step.skills; track skill) {
+                <span class="skill-tag">{{ skill }}</span>
+                }
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
       }
     </div>
   </div>

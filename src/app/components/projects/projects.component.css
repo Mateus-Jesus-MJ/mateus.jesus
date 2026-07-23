@@ -11,21 +11,13 @@
 }
 
 .project-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 2.5rem;
-  transition: all 0.4s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
 
 .project-icon {
   color: var(--accent);

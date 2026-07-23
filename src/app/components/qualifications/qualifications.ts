@@ -19,7 +19,8 @@ export class QualificationsComponent {
         { title: 'Yellow Belt na Metodologia Lean Six Sigma', provider: 'FC Consult' },
         { title: 'Formação de Auditores Internos - ABNT NBR ISO 19011:2018', provider: 'FC Consult' },
         { title: 'Gestão Integrada - Normas ISO 9001, 14001 e 45001', provider: 'FC Consult' },
-        { title: 'Gestão Integrada - Norma ISO 37001:2017', provider: 'FC Consult' },
+        { title: 'Gestão Integrada - Norma ISO 37001:2025', provider: 'FC Consult' },
+        { title: 'Gestão Integrada - Norma ISO IEC 27001:2022', provider: 'FC Consult' },
         { title: 'Proteção e Privacidade de Dados Pessoais - ABNT PE 451.01', provider: 'FC Consult' },
         { title: 'Gestão da Inovação - ISO 56002:2019 e NP 4457:2021', provider: 'FC Consult' },
         { title: 'Formação de Auditores de ESD', provider: 'New Horizon' }
