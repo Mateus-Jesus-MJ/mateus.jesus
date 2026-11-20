@@ -30,6 +30,7 @@
   --accent-rgb: 59, 130, 246;
 }
 
+html[data-theme="light"],
 [data-theme="light"] {
   --bg-primary: #FAFAFA;
   --bg-surface: #FFFFFF;
