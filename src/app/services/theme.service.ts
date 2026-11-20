@@ -9,15 +9,24 @@ export class ThemeService {
   );
 
   constructor() {
+    this.applyTheme(this.theme());
     effect(() => {
-      const currentTheme = this.theme();
-      localStorage.setItem('theme', currentTheme);
-      document.documentElement.setAttribute('data-theme', currentTheme);
+      this.applyTheme(this.theme());
     });
   }
 
   toggleTheme() {
-    this.theme.update(t => t === 'light' ? 'dark' : 'light');
+    const next = this.theme() === 'light' ? 'dark' : 'light';
+    this.theme.set(next);
+    this.applyTheme(next);
+  }
+
+  private applyTheme(theme: 'light' | 'dark') {
+    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    if (document.body) {
+      document.body.setAttribute('data-theme', theme);
+    }
   }
 
   get isDark() {
