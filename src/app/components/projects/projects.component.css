@@ -182,24 +182,44 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 50;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 1rem;
+  animation: modalFadeIn 0.2s ease-out;
 }
 
 .modal-content {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 14px;
   width: 100%;
   max-width: 48rem;
   max-height: 88vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  animation: modalSlideUp 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .modal-header {
@@ -209,7 +229,13 @@
   gap: 1rem;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--bg-primary);
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .modal-header {
+    padding: 1.5rem 2rem;
+  }
 }
 
 .modal-title-group {
@@ -250,9 +276,19 @@
   border-radius: 8px;
   border: 1px solid var(--border-color);
   background-color: var(--bg-surface);
-  color: var(--text-primary);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   flex-shrink: 0;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }
 
 .modal-body {
@@ -293,6 +329,12 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary-mono:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
 .features-grid {
@@ -341,4 +383,10 @@
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline-mono:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--border-hover);
 }
