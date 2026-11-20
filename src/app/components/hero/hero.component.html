@@ -48,12 +48,25 @@
           </path>
         </svg>
       </a>
+      <a href="mailto:mateusdejesus2602@gmail.com" class="icon-btn-sq" title="E-mail" aria-label="E-mail">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+      <a href="https://wa.me/5573988465041?text=Olá,%20vim%20pelo%20seu%20portfólio" target="_blank" rel="noopener noreferrer"
+        class="icon-btn-sq" title="WhatsApp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.375c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-1.984 1.422-.5.078-1.141.109-1.844-.109-.438-.141-.984-.328-1.688-.641-2.969-1.281-4.906-4.281-5.063-4.484-.141-.203-1.203-1.609-1.203-3.063 0-1.453.766-2.172 1.031-2.469.266-.297.578-.375.766-.375.188 0 .391.016.563.016.172 0 .406-.063.641.484.25.578.828 2.016.906 2.172.078.156.125.344.031.547-.094.203-.141.328-.297.5-.156.172-.313.391-.453.516-.156.156-.313.328-.141.641.172.313.781 1.297 1.672 2.094 1.156 1.031 2.125 1.344 2.438 1.5.313.156.484.125.672-.078.188-.203.781-.906.984-1.219.203-.313.422-.266.703-.156.281.109 1.797.844 2.109 1 .313.156.516.234.594.359.078.125.078.734-.172 1.438z"/>
+        </svg>
+      </a>
     </div>
   </div>
 
   <div class="hero-techs">
     @for (tech of heroTechs; track tech.name) {
-    <span class="tech-icon-item" [title]="tech.name" [attr.aria-label]="tech.name">
+    <span class="tech-icon-item" [attr.aria-label]="tech.name">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
         stroke-linecap="round" stroke-linejoin="round">
         <path [attr.d]="tech.icon"></path>

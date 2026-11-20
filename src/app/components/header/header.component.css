@@ -6,6 +6,16 @@
   z-index: 40;
   padding: 1.15rem 1rem;
   pointer-events: none;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+}
+
+.top-nav-wrap.scrolled {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--border-color);
+  pointer-events: auto;
 }
 
 .top-nav-inner {
